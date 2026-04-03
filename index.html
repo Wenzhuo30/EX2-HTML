@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+</head>
+
+<body>
+<div class="datetime-display" id="datetime"></div>
+    <script>
+        function updateDateTime(){
+            const now = new Date();
+            const day = String(now.getDate()).padStart(2,'0');
+            const month = String(now.getMonth()).padStart(2,'0');
+            const year = now.getFullYear();
+
+            const hour = String(now.getHours()).padStart(2,'0');
+            const minute = String(now.getMinutes()).padStart(2,'0');
+            const dateTimeString = `${day}/${month}/${year}, ${hour}.${minute}`;
+            document.getElementById('datetime').textContent = dateTimeString;
+        }
+        updateDateTime();
+        setInterval(updateDateTime,60000);
+    </script>
+    <section>
+        <table width="100%" border="0" style="text-align: center;">
+            <thead>
+                
+                <tr>
+                    <th colspan="2"> Shinchan - Homepage</th>
+                </tr>
+                <td><img src="./assets/assets/shin-chan-banner.jpg" alt="banner"></td>
+                <td><img src="./assets/assets/naughtiest-son.jpg" alt="naughtiestSon"width=70%></td>
+            </thead>
+            
+        </table>
+    </section>
+
+
+<div style="text-align: center;">
+    <a  href="#media"> Shinchan:Shiro and the Coal Town Game</a>&nbsp&nbsp&nbsp&nbsp&nbsp <a href="#character">Characters</a> &nbsp&nbsp&nbsp&nbsp&nbsp<a href="#favourite">Who's your favourite?</a>
+</div>
+
+    <section id="media" style="text-align: center;"><h4>Shinchan:Shiro and the Coal Town</h4>
+    <h5 style="text-align: center;">(Available on: Nintendo Switch and Windows PC)</h5>
+    <video width="700" height="400" controls muted>
+    <source src="./assets/assets/shinchan-and-the-coal-town.mp4" type="video/mp4">
+    </video>
+    </section>
+
+    <section id="character">
+        <table width="100%" border="0" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th colspan="3">The characters </th>
+                </tr>
+                <tr>
+                    <th>Shinnosuke Nohara (Shinchan)</th>
+                    <th>Misae Nohara (Mom)</th>
+                    <th>Hiroshi Nohara (Dad)</th>
+                </tr>
+                <tr>
+                    <td><img src="./assets/assets/character-shinchan.png" alt="Shinosuke Nohara" width="120"></td>
+                    <td><img src="./assets/assets/character-misae.webp" alt="Misae Nohara"width="120"></td>
+                    <td><img src="./assets/assets/character-hiroshi.webp" alt="hiroshi"width="120"></td>
+                </tr>
+                <tr>
+                    <td>The mischievous 5-year-old protagonist known for his hilarious antics and love of choco chips.</td>
+                    <td>Shinchan's short-tempered but loving mother, always trying to keep him in line.</td>
+                    <td>The laid-back father who works at a company and enjoys his evening beer.</td>
+                </tr>
+                <tr>
+                    <th>Himawari (Sister)</th>
+                    <th>Yukino Nohara (Shiro)</th>
+                    <th>Toru Kazama</th>
+                </tr>
+                <tr>
+                    <td><img src="./assets/assets/character-himawari.png" alt="Himawari"width="120"></td>
+                    <td><img src="./assets/assets/character-shiro.png" alt="dog"width="120"></td>
+                    <td><img src="./assets/assets/character-toru-kazama.webp" alt="toru"width="120"></td>
+                </tr>
+                <tr>
+                    <td>The youngest of the Noharas. Loves shiny objects and brand name goods. Smiles sideways, like Shinchan</td> 
+                    <td>The family dog — small, fluffy, and sometimes the most sensible member of the household.</td>
+                    <td>The smart and responsible friend of Shinchan, often the voice of reason in the group.</td>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+
+    <section id="favourite">
+        <h1>Who's your favourite?</h1>
+        <form>
+        <label for="favourite character">Who's your favourite character? </label>
+        <select id="character">
+           <option>Shinnosuke Nohara(Shinchan)</option>
+           <option>Misae Nohara(Mom)</option>
+           <option>Hirosi Nohara(Dad)</option>
+           <option>Himawari(Sister)</option>
+           <option>Yukino Nohara(Shiro)</option>
+           <option>Toru Kazama</option>
+        </form>
+        </select><br><br>
+
+        <h3>Character not in the list? Write their name below:</h3>
+        <p>Your other favourite character: <input type="text"></p> 
+        <p>Why do you like this character? <br><br><textarea rows="3" cols="50"></textarea></p>
+        <h3>Tell us a bit more about yourself</h3>
+        <p>Your Name: <input type="text"></p> 
+
+
+        <p><label>Your Gender: </label>
+        <input type="radio" id=“male name=“gender” value=“male”>
+        <label for=“male”>Male</label>
+        <input type="radio" id=“female” name=“gender” value=“female”>
+        <label for=“female”>Female</label></p>
+
+        <p>Your Date of Birth: <input type="text"></p> 
+        <p>Your Email:  <input type="text"></p>  
+
+
+
+
+        <button type="submit">submit</button>
+    </form>
+    </section>
+
+    
+</body>
+</html>
